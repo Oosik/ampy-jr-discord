@@ -1,0 +1,13 @@
+{
+  "name": "amp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Oosik/scamp-discord.git",
+  "author": "Sovereign Nations <amprewards@proton.me>",
+  "license": "MIT",
+  "scripts": {
+	"start": ". venv/bin/activate && which python3 && python3 --version && python3 main.py dev",
+	"install" : "python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt",
+	"make:requirements": "pip freeze > requirements.txt"
+  }
+}
