@@ -1,4 +1,12 @@
 def links():
+    """
+    Returns a string of links to variousAmp, Anvil, and Acronym Foundation channels and resources.
+
+    Returns
+    -------
+    str
+        A string of links to various Anvil and Acronym Foundation channels and resources.
+    """
     text = "[AMP Telegram](<https://t.me/ampchat>)" \
     "\n[Anvil Discord](<https://discord.com/invite/esfFn3dedz>)" \
     "\n[Facebook](<https://www.facebook.com/groups/1286502338388975>)" \

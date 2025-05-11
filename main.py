@@ -43,6 +43,18 @@ async def price(interaction: discord.Interaction):
 
 @bot.tree.command(name="links", description="Displays useful community links", guild=discord.Object(id=get_guild_id()))
 async def links(interaction: discord.Interaction):
+    """
+    Sends useful community links to the chat.
+
+    Parameters
+    ----------
+    interaction : discord.Interaction
+        The interaction object that triggered this function.
+
+    Returns
+    -------
+    None
+    """
     await interaction.response.defer()
     text = cmd.links()
     await interaction.followup.send(f"{text}")
