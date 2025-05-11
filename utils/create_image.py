@@ -24,6 +24,9 @@ def create_image(command):
     elif command == "price":
         table = cmd.price('amp-token')
         table = table.get_string()
+    elif command == "tvl":
+        table = cmd.tvl()
+        table = table.get_string()
 		
 
     base_dir = os.path.dirname(__file__)

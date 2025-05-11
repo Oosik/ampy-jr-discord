@@ -52,7 +52,42 @@ def run_curl(url, headers=None):
 
 
 def get_coingecko_key(url):
+    """
+    Appends the CoinGecko API key to the URL if not in development mode.
+
+    Parameters
+    ----------
+    url : str
+        The URL to which the API key should be appended.
+
+    Returns
+    -------
+    str
+        The original URL if in development mode, otherwise the URL appended with the CoinGecko API key.
+    """
     if (is_dev()):
         return url
     else:
         return url + '&x_cg_demo_api_key=' + get_env('COINGECKO_KEY')
+
+def get_alchemy_key():
+    """
+    Retrieves the Alchemy API key from the environment variables.
+
+    Returns
+    -------
+    str
+        The Alchemy API key from the environment variables.
+    """
+    return get_env('ALCHEMY_KEY')
+
+def get_etherscan_key():
+    """
+    Retrieves the Etherscan API key from the environment variables.
+
+    Returns
+    -------
+    str
+        The Etherscan API key from the environment variables.
+    """
+    return get_env('ETHERSCAN_KEY')

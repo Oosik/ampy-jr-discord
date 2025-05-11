@@ -41,6 +41,26 @@ async def price(interaction: discord.Interaction):
     view = ImageUI(the_command="price")
     await interaction.followup.send(f"```\n{table}```", view=view)
 
+
+@bot.tree.command(name="tvl", description="Displays Flexa v3 pool TVL", guild=discord.Object(id=get_guild_id()))
+async def tvl(interaction: discord.Interaction):
+    """
+    Retrieves the total value locked in all Flexa v3 pools and sends it in a formatted string.
+
+    Parameters
+    ----------
+    interaction : discord.Interaction
+        The interaction object that triggered this function.
+
+    Returns
+    -------
+    None
+    """
+    await interaction.response.defer()
+    table = cmd.tvl()
+    view = ImageUI(the_command="tvl")
+    await interaction.followup.send(f"```\n{table}```", view=view)
+
 @bot.tree.command(name="links", description="Displays useful community links", guild=discord.Object(id=get_guild_id()))
 async def links(interaction: discord.Interaction):
     """
