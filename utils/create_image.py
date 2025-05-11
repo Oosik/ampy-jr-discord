@@ -21,6 +21,10 @@ def create_image(command):
         table = cmd.apy()
         table = table.get_string()
         table = table.replace('\U0001F680', 'B ')
+    elif command == "price":
+        table = cmd.price('amp-token')
+        table = table.get_string()
+		
 
     base_dir = os.path.dirname(__file__)
     font_path = os.path.join(base_dir, "..", "UbuntuMono-R.ttf")

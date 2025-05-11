@@ -20,7 +20,26 @@ async def apy(interaction: discord.Interaction):
     await interaction.response.defer()
     table = cmd.apy()
     view = ImageUI(the_command="apy")
-    await interaction.followup.send(f"```{table}```", view=view)
+    await interaction.followup.send(f"```\n{table}```", view=view)
+
+@bot.tree.command(name="price", description="Displays price and volume metrics", guild=discord.Object(id=get_guild_id()))
+async def price(interaction: discord.Interaction):
+    """
+    Retrieves price and volume metrics and sends them in a formatted string.
+
+    Parameters
+    ----------
+    interaction : discord.Interaction
+        The interaction object that triggered this function.
+
+    Returns
+    -------
+    None
+    """
+    await interaction.response.defer()
+    table = cmd.price('amp-token')
+    view = ImageUI(the_command="price")
+    await interaction.followup.send(f"```\n{table}```", view=view)
 
 
 

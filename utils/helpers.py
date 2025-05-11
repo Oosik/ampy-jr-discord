@@ -1,4 +1,5 @@
 import requests, sys
+from config.settings import get_env
 
 
 def is_dev():
@@ -48,3 +49,10 @@ def run_curl(url, headers=None):
     ## parse the JSON response
     data = response.json()
     return data
+
+
+def get_coingecko_key(url):
+    if (is_dev()):
+        return url
+    else:
+        return url + '&x_cg_demo_api_key=' + get_env('COINGECKO_KEY')
