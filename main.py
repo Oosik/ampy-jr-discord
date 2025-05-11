@@ -41,6 +41,12 @@ async def price(interaction: discord.Interaction):
     view = ImageUI(the_command="price")
     await interaction.followup.send(f"```\n{table}```", view=view)
 
+@bot.tree.command(name="links", description="Displays useful community links", guild=discord.Object(id=get_guild_id()))
+async def links(interaction: discord.Interaction):
+    await interaction.response.defer()
+    text = cmd.links()
+    await interaction.followup.send(f"{text}")
+
 
 
 
