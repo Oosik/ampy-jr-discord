@@ -60,6 +60,28 @@ async def tvl(interaction: discord.Interaction):
     table = cmd.tvl()
     view = ImageUI(the_command="tvl")
     await interaction.followup.send(f"```\n{table}```", view=view)
+    
+
+@bot.tree.command(name="mc", description="Displays market cap metrics", guild=discord.Object(id=get_guild_id()))
+async def mc(interaction: discord.Interaction):
+    """
+    Retrieves market cap metrics and sends them in a formatted string.
+
+    Parameters
+    ----------
+    interaction : discord.Interaction
+        The interaction object that triggered this function.
+
+    Returns
+    -------
+    None
+    """
+    await interaction.response.defer()
+    table = cmd.mc('amp-token')
+    view = ImageUI(the_command="mc")
+    await interaction.followup.send(f"```\n{table}```", view=view)
+    
+
 
 @bot.tree.command(name="links", description="Displays useful community links", guild=discord.Object(id=get_guild_id()))
 async def links(interaction: discord.Interaction):
