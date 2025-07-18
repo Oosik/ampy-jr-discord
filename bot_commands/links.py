@@ -13,6 +13,7 @@ def links():
 	"\n[Github](<https://github.com/AcronymFoundation/anvil-contracts>)" \
 	"\n[Reddit](<https://www.reddit.com/r/AmpToken/>)" \
     "\n[Anvil Reddit](<https://www.reddit.com/r/AnvilProtocol/>)" \
+    "\n[AMP Twitter](<https://x.com/ampdotxyz>)" \
     "\n[AF Twitter](<https://x.com/acr_nym_fdn>)" \
     "\n[Anvil Twitter](<https://x.com/anvil_xyz>)" \
 	"\n[AF Medium](<https://medium.com/@acronym-foundation>)"
