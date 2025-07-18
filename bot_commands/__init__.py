@@ -3,11 +3,13 @@ from .price import price
 from .links import links
 from .tvl import tvl
 from .mc import mc
+from .safety import safety
 
 __all__ = [
 	"apy",
 	"price",
 	"links",
 	"tvl",
-	"mc"
+	"mc",
+	"safety"
 ]

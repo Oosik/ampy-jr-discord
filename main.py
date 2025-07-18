@@ -100,6 +100,14 @@ async def links(interaction: discord.Interaction):
     await interaction.response.defer()
     text = cmd.links()
     await interaction.followup.send(f"{text}")
+    
+
+
+@bot.tree.command(name="safety", description="Displays useful safety info", guild=discord.Object(id=get_guild_id()))
+async def safety(interaction: discord.Interaction):
+    await interaction.response.defer()
+    text = cmd.safety()
+    await interaction.followup.send(f"{text}")
 
 
 
