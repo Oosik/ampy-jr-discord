@@ -3,8 +3,6 @@ from utils import run_curl
 from utils.helpers import get_coingecko_key
 
 def price(token_id):
-    ##
-    ## URL for the API
     """
     Grabs price, volume, high, low, 24H change, ATH, and ATL metrics for a given token ID and returns a formatted string containing a table of the metrics.
 
@@ -18,6 +16,8 @@ def price(token_id):
     str
         A formatted string containing a table of the metrics.
     """
+    ##
+    ## URL for the API
     url = f'https://api.coingecko.com/api/v3/coins/markets?ids={token_id}&vs_currency=usd'
     url = get_coingecko_key(url)
 
