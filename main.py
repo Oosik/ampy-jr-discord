@@ -105,6 +105,18 @@ async def links(interaction: discord.Interaction):
 
 @bot.tree.command(name="safety", description="Displays useful safety info", guild=discord.Object(id=get_guild_id()))
 async def safety(interaction: discord.Interaction):
+    """
+    Sends useful safety information to the chat.
+
+    Parameters
+    ----------
+    interaction : discord.Interaction
+        The interaction object that triggered this function.
+
+    Returns
+    -------
+    None
+    """
     await interaction.response.defer()
     text = cmd.safety()
     await interaction.followup.send(f"{text}")
@@ -114,6 +126,19 @@ async def safety(interaction: discord.Interaction):
 
 @bot.event
 async def on_ready():
+    """
+    Prints out information when the bot is ready, including the bot's username and ID,
+    and the guilds it is connected to. It also syncs slash commands to the guild in the
+    `config/settings.py` file.
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+    """
     print("------")
     print(f"Logged in as {bot.user} (ID: {bot.user.id})")
     print("------")
