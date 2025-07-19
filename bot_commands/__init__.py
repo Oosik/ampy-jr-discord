@@ -4,6 +4,7 @@ from .links import links
 from .tvl import tvl
 from .mc import mc
 from .safety import safety
+from .gas import gas
 
 __all__ = [
 	"apy",
@@ -11,5 +12,6 @@ __all__ = [
 	"links",
 	"tvl",
 	"mc",
-	"safety"
+	"safety",
+	"gas"
 ]

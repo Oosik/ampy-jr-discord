@@ -30,6 +30,9 @@ def create_image(command):
     elif command == "mc":
         table = cmd.mc('amp-token')
         table = table.get_string()
+    elif command == "gas":
+        table = cmd.gas()
+        table = table.get_string()
 		
 
     base_dir = os.path.dirname(__file__)
