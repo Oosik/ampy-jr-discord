@@ -36,6 +36,9 @@ def create_image(command):
     elif command == "price.anvil":
         table = cmd.price('anvil')
         table = table.get_string()
+    elif command == "mc.anvil":
+        table = cmd.mc('anvil')
+        table = table.get_string()
 		
 
     base_dir = os.path.dirname(__file__)

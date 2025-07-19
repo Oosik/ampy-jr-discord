@@ -161,6 +161,26 @@ async def anvil_price(interaction: discord.Interaction):
     table = cmd.price('anvil')
     view = ImageUI(the_command="price.anvil")
     await interaction.followup.send(f"```\n{table}```", view=view)
+    
+
+@bot.tree.command(name="anvil_mc", description="Displays market cap metrics for ANVL", guild=discord.Object(id=get_guild_id()))
+async def anvil_mc(interaction: discord.Interaction):
+    """
+    Retrieves market cap metrics for ANVL and sends them in a formatted string.
+
+    Parameters
+    ----------
+    interaction : discord.Interaction
+        The interaction object that triggered this function.
+
+    Returns
+    -------
+    None
+    """
+    await interaction.response.defer()
+    table = cmd.mc('anvil')
+    view = ImageUI(the_command="mc.anvil")
+    await interaction.followup.send(f"```\n{table}```", view=view)
 
 
 
