@@ -13,7 +13,7 @@ def gas():
     """
     ##
     ## URL for the API
-    url = f'https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey={get_etherscan_key()}' 
+    url = f'https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey={get_etherscan_key()}' 
 
     ##
     ## create table
